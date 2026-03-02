@@ -17,11 +17,22 @@ public class ListNode {
     }
 
     public ListNode(int[] nums) {
-        ListNode head = new ListNode(nums[0]);
-        ListNode cur = head;
+        this.val = nums[0];
+        ListNode cur = this;
         for (int i = 1; i < nums.length; i++) {
             cur.next = new ListNode(nums[i]);
             cur = cur.next;
         }
+    }
+
+    public String print() {
+        StringBuilder sb = new StringBuilder();
+        ListNode cur = this;
+        while (cur != null) {
+            sb.append(cur.val);
+            if (cur.next != null) sb.append(" -> ");
+            cur = cur.next;
+        }
+        return sb.toString();
     }
 }
