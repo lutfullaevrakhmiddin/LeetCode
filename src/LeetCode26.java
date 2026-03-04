@@ -1,5 +1,3 @@
-import resources.ListNode;
-
 public class LeetCode26 {
     public static void main(String[] args) {
         System.out.println(removeDuplicates(new int[]{1, 2, 3, 4, 4, 5, 5}));
